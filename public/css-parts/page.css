@@ -1,0 +1,116 @@
+body {
+    margin: 0px;
+    padding: 0px;
+
+    color: #333;
+    font-size: 16px;
+    line-height: 1.76;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background: #f0f0f0;
+}
+
+::selection {
+    color: #fff;
+    background: #32a33a;
+}
+
+#page-content {
+
+}
+
+#header {
+    background: #404040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0px;
+}
+
+
+#footer-box {
+    background: #404040;
+    font-size: 13px;
+}
+
+.header-btn {
+    padding: 5px 10px;
+    background: #4c4c4c;
+    margin: 0px 2px;
+    border-radius: 6px;
+    color: #FFD152;
+}
+
+.header-btn:hover {
+    background: #2e2e2e;
+}
+
+.header-btn a {
+    color: #FFD152;
+}
+
+.flexbox {
+    display: flex;
+}
+.grey {
+    flex: 0 0 240px;
+}
+.green {
+    flex: 1;
+}
+.blue {
+    flex: 1;
+}
+
+#article {
+    padding: 5px;
+}
+
+h1 {
+    margin: 0px;
+    font-weight: 500;
+    font-family: 'Fira Sans',sans-serif;
+    font-size: 32px;
+}
+
+h2 {
+    margin: 0px;
+    font-weight: 500;
+    font-family: 'Fira Sans',sans-serif;
+    font-size: 26px;
+}
+
+pre {
+    margin-bottom: 0px !important;
+}
+
+pre code.hljs {
+    padding: 1em !important;
+   
+}
+
+.copy-btn {
+    background-color: #FFD152;
+    color: #343233;
+    border-radius: 0px 0px 7px 7px;
+    text-align: center;
+    border-bottom: 2px solid #f5c749;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Fira Sans',sans-serif;
+    padding-top: 2px;
+    padding: 0px 27px;
+}
+
+.copy-btn:hover {
+    cursor: pointer;
+    background: #f5c749;
+}
+
+.flex-start {
+    display: flex;
+    align-items: flex-start;
+}

@@ -1,0 +1,3 @@
+<!--- Form grabber library: ---->
+<link href="{{URL::to('/')}}/form-grabber-bundle.css" rel="stylesheet">
+<script src="{{URL::to('/')}}/form-grabber-bundle.js"></script>
