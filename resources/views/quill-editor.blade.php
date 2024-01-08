@@ -25,8 +25,19 @@
     <!------------------->
     <h3>Як вивести вміст тестового редактору на сайті:</h3>
     <div class="mb-3">
-        quil-content
+        @include("templates.code", [
+            "id" => "text",
+            'path' => "../resources/views/forms-usage/quill-content-example.blade.php",
+            'lang' => "php",
+        ]) 
     </div>
+
+    <!------------------->
+    <h3>Додаткова інформація:</h3>
+    <div class="mb-3">
+        Редактор буде заблокований і прихований з допомогою класу d-none. А весь контент буде вставлений в блок <code><?php echo 'id="{{$id}}-content"'; ?></code> у вигляді чистого HTML.
+    </div>
+
 
 
     <!------------------->
@@ -46,6 +57,16 @@
         @include("templates.code", [
             "id" => "text-editor",
             'path' => "../resources/views/forms/text-editor.blade.php",
+            'lang' => "php",
+        ])
+    </div>
+
+    <!------------------->
+    <h3>Код шаблону:</h3>
+    <div class="mb-3">
+        @include("templates.code", [
+            "id" => "quill-content",
+            'path' => "../resources/views/forms/quill-content.blade.php",
             'lang' => "php",
         ])
     </div>
