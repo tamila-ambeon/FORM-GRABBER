@@ -1,4 +1,4 @@
-<!----- Date Picker: ----->
+<!----- Date Picker @if(isset($id))id#{{$id}} @endif: ----->
 <div>
     <input 
         type="date"
@@ -8,4 +8,4 @@
         @if(isset($value))value="{{$value}}" @else value="" @endif
     >
 </div>
-<!----- /Date Picker ----->
+<!----- /Date Picker @if(isset($id))id#{{$id}} @endif ----->
