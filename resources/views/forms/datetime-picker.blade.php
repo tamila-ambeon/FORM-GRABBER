@@ -1,4 +1,4 @@
-<!----- Datetime picker: ----->
+<!----- Datetime Picker @if(isset($id))id#{{$id}} @endif: ----->
 <div>
     <input 
         type="datetime-local"
@@ -8,4 +8,4 @@
         @if(isset($value))value="{{$value}}" @else value="" @endif
     >
 </div>
-<!----- /Datetime picker ----->
+<!----- /Datetime Picker @if(isset($id))id#{{$id}} @endif ----->

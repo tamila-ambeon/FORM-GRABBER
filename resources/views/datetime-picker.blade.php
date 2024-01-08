@@ -11,8 +11,8 @@
     <h3>Код для копіювання:</h3>
     <div class="mb-3">
         @include("templates.code", [
-            "id" => "hidden",
-            'path' => "../resources/views/forms-usage/hidden-example.blade.php",
+            "id" => "datetime",
+            'path' => "../resources/views/forms-usage/datetime-example.blade.php",
             'lang' => "php",
         ])
     </div>
@@ -28,7 +28,11 @@
     <!------------------->
     <h3>Приклад:</h3>
     <div class="mb-3">
-        Приховане поле не відображається.
+        @include('forms.datetime-picker', [
+            'id' => "name",
+            "disabled" => false,
+            'value' => "2023-12-12T19:30" // format: YYYY-MM-DDTHH:MM
+        ])
     </div>
 
 
@@ -36,8 +40,8 @@
     <h3>Код шаблону:</h3>
     <div class="mb-3">
         @include("templates.code", [
-            "id" => "hidden",
-            'path' => "../resources/views/forms/hidden.blade.php",
+            "id" => "datetime",
+            'path' => "../resources/views/forms/datetime-picker.blade.php",
             'lang' => "php",
         ])
     </div>

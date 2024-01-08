@@ -28,7 +28,7 @@
     <!------------------->
     <h3>Приклад:</h3>
     <div class="mb-3">
-        @include('forms.datepicker', [
+        @include('forms.date-picker', [
             'id' => "name",
             "disabled" => false,
             'value' => "2023-12-12" // format: YYYY-MM-DD
@@ -41,7 +41,7 @@
     <div class="mb-3">
         @include("templates.code", [
             "id" => "date",
-            'path' => "../resources/views/forms/datepicker.blade.php",
+            'path' => "../resources/views/forms/date-picker.blade.php",
             'lang' => "php",
         ])
     </div>
