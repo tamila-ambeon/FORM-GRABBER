@@ -5,6 +5,7 @@
 <div id="article" class="pt-3 pb-3 bg-white">
 <h1 style="text-align: center;">Textarea</h1>
 
+<div class="p-3">
     <!------------------->
     <h3>Код для копіювання:</h3>
     <div class="mb-3">
@@ -41,12 +42,13 @@
     <h3>Код шаблону:</h3>
     <div class="mb-3">
         @include("templates.code", [
-            "id" => "hidden",
+            "id" => "textarea",
             'path' => "../resources/views/forms/textarea.blade.php",
             'lang' => "php",
         ])
     </div>
 
+</div>
 </div>
 @endsection
 

@@ -7,7 +7,6 @@
     @if(isset($min))min="{{$min}}" @endif
     @if(isset($max))max="{{$max}}" @endif
     @if(isset($step))step="{{$step}}" @endif
-    @if(isset($readonly)) @if($readonly) readonly @endif @endif
     @if(isset($disabled)) @if($disabled) disabled @endif @endif
     @if(isset($value))value="{{$value}}" @else value="" @endif
 >

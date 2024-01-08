@@ -105,8 +105,15 @@ var TextEditors = (function() {
                     // Delra object here:
                     if(editor.type == "quill") {
 
+                        if(this.isJson(text)) {
+                            return editor.core.setContents(JSON.parse(text))
+                        } else {
+                            console.log("Quill editor:", "Value is not valid json.")
+                        }
+
+                        
                        // editor.core.disable()
-                        return editor.core.setContents(JSON.parse(text))
+                        
                     }
 
                     return
