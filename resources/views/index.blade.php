@@ -9,7 +9,7 @@
 
 
 <h2>Інсталяція поетапно</h2>
-<p>Підключи скрипти у секцію head:</p>
+<p>Крок 1 з Х. Підключи скрипти у секцію head:</p>
 @include("templates.code", [
     "id" => "bundles-code",
     'path' => "../resources/views/codes/bundles.stub",
@@ -17,6 +17,8 @@
 ])
 
 <p>Сюди входить: bootstrap v5.3.2, Quill Editor v1.3.6 і моя бібліотека FormGrabber.</p>
+
+<p>Крок 2 з Х. Скопіюй шаблони з у новому проекті в папку view/forms.</p>
 
 <h2>Як це працює? Суть</h2>
 
