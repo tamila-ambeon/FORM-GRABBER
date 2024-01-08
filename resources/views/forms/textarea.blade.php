@@ -2,7 +2,6 @@
 <textarea autocomplete="off"
     @if(isset($id))id="{{$id}}" @endif
     @if(isset($class))class="{{$class}}" @else class="form-control form-control-sm" @endif
-    @if(isset($name))name="{{$name}}" @endif
     @if(isset($disabled)) @if($disabled) disabled @endif @endif
     @if(isset($placeholder))placeholder="{{$placeholder}}" @endif
     @if(isset($minlength))minlength="{{$minlength}}" @endif
