@@ -14,7 +14,9 @@
     cursor: pointer;
 }
 
-.v-button:active {
+.v-btn-default:active,
+.v-btn-green:active,
+.v-btn-red:active {
     transform: scale(.95);
 }
 
