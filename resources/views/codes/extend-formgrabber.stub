@@ -1,0 +1,18 @@
+class MainInfo extends FormGrabber
+{
+    beforeSend() {}
+    onSuccess(json) {}
+    onError(error) {}
+}
+
+try {
+    let mainInfo = new MainInfo({
+        // "debug": true,
+        'button_id': "my_info_button",
+        'input_ids': [],
+        'method': "PATCH",
+        'endpoint': document.getElementsByTagName("base")[0].href + "api/test-form-input"
+    })
+} catch (e) {
+    console.log('Error while creating form listener: ', e)
+}

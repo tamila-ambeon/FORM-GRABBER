@@ -1,4 +1,4 @@
-@include('buttons.button-template', [
+@include('forms.button', [
     'id' => '', // ідентифікатор кнопки
     'title' => 'Button', // надпис на кнопці
     'size' => 'small', // small, middle, big

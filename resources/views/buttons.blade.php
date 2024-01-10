@@ -33,7 +33,7 @@
         <h3>Код для копіювання:</h3>
         <div class="mb-3"> 
             @include("templates.code", [
-                "id" => "text",
+                "id" => "button-example",
                 'path' => "../resources/views/forms-usage/button-example.blade.php",
                 'lang' => "php",
             ]) 
@@ -41,7 +41,16 @@
         <div class="mb-3"> 
             <p>Вказаний ідентифікатор слід передати обробнику Form Grabber.</p>
         </div>
+        <div class="mb-3">
+            <p>Кнопки не мають вказаної ширини і займуть всю ширину блоку. Для того, що вони не розтягувались, обгортай їх у блок:</p> 
+            @include("templates.code", [
+                "id" => "flex-row-example",
+                'path' => "../resources/views/forms-usage/flex-row-example.blade.php",
+                'lang' => "html",
+            ]) 
+        </div>
 
+        
     </div>
 </div>
 @endsection

@@ -343,13 +343,15 @@ class FormGrabber
                 throw Error(response.statusText)
             }
 
+
             let json = await response.json().then( (json) => {
                 return json
+            }).catch( (error) => {
+                console.error("Server response is not JSON.", error)
             })
 
             this.onSuccess(json)
-
-
+            
         } catch (e) {
             this.onError(e)
         }
