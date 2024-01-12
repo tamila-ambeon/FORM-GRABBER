@@ -11,7 +11,8 @@
         <!----- row: ----->
         <div class="container">
         <div class="row">
-            <div class="col-4 ps-4 pe-4">
+            <div class="col-4 ps-4 pe-4 ">
+
                 <div class="mb-2">
                     @include('forms.hidden', [
                         'id' => "hidden_id", 
@@ -103,10 +104,19 @@
 
                 <div class="mb-2 d-flex flex-row">
                     @include('forms.button', [
-                        'id' => 'done', // ідентифікатор кнопки
+                        'id' => 'done_button', // ідентифікатор кнопки
                         'title' => 'Отримати дані', // надпис на кнопці
                         'size' => 'middle', // small, middle, big
                         'type' => 'green', // green, red, disabled, default
+                    ])
+
+                    @include('forms.button', [
+                        'id' => 'waiting_button', // ідентифікатор кнопки
+                        'title' => 'Обробляю дані', // надпис на кнопці
+                        'size' => 'middle', // small, middle, big
+                        'type' => 'disabled', // green, red, disabled, default
+                        'display' => false,
+                        'icon' => 'spinner'
                     ])
                 </div>
 
@@ -132,6 +142,7 @@
 
 </div>
 <script src="{{URL::to('/')}}/js/inputs/done-form.js"></script>
+
 @endsection
 
 @section('sidebar')

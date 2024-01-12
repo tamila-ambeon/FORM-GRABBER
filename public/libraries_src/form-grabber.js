@@ -185,6 +185,7 @@ class FormGrabber
     params = null
     buttonId = null 
     buttonElement = null
+    switchButtonElement = null
     formData = null
 
     /**
@@ -229,11 +230,26 @@ class FormGrabber
         this.buttonElement = document.getElementById(this.params.button_id)
 
         if(this.buttonElement == undefined) {
-            console.error("Cannot find element with id: ", this.params.button_id)
+            console.error("Cannot find button element with id: ", this.params.button_id)
             return
         }
 
         if(this.debug) console.log("Button #" + this.params.button_id + " was registered successfully.")
+
+        // Якщо вказаний ідентифікатор кнопки для заміни:
+        if(this.params.hasOwnProperty("switch_button_id")) {
+            this.switchButtonElement = document.getElementById(this.params.switch_button_id)
+
+            if(this.switchButtonElement == undefined) {
+                console.error("Cannot find switch button element with id: ", this.params.switch_button_id)
+                return
+            }
+
+            if(this.debug) console.log("Switch button #" + this.params.switch_button_id + " was registered successfully.")
+        }
+
+        
+
 
         this.registerButtonListener()
     }
@@ -244,9 +260,18 @@ class FormGrabber
     registerButtonListener()
     {
         this.buttonElement.addEventListener("click", (element) => { 
+
+            if(this.switchButtonElement != null) {
+                this.toggleButtonVisibility()
+            }
+
             if(this.debug) console.log("Button #" + this.params.button_id + " was clicked.")
             this.formData = new FormData()
             this.grabInputs()
+        })
+
+        this.switchButtonElement.addEventListener("click", (element) => { 
+            if(this.debug) console.log("Button #" + this.params.button_id + " was clicked.")
         })
     }
 
@@ -312,6 +337,28 @@ class FormGrabber
         this.getRequestOptions()
     }
 
+    /**
+     * 
+     */
+    toggleButtonVisibility() 
+    {
+        if(this.buttonElement != null) {
+            if(this.buttonElement.classList.contains('d-none')) {
+                this.buttonElement.classList.remove('d-none')
+            } else {
+                this.buttonElement.classList.add('d-none')
+            }
+        }
+
+        if(this.switchButtonElement != null) {
+            if(this.switchButtonElement.classList.contains('d-none')) {
+                this.switchButtonElement.classList.remove('d-none')
+            } else {
+                this.switchButtonElement.classList.add('d-none')
+            }
+        }
+    }
+
 
     /**
      *  
@@ -350,10 +397,42 @@ class FormGrabber
                 console.error("Server response is not JSON.", error)
             })
 
+            this.toggleButtonVisibility()
+
             this.onSuccess(json)
             
+            Toastify({
+                text: "Запит виконано!",
+                duration: 1500,
+                gravity: "bottom",
+                close: true,
+                gravity: "bottom", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(135deg, rgb(80 181 39), rgb(62 195 53)",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast()
+
         } catch (e) {
             this.onError(e)
+            this.toggleButtonVisibility()
+
+            Toastify({
+                text: "Сталась помилка. Деталі в консолі",
+                duration: 1500,
+                gravity: "bottom",
+                close: true,
+                gravity: "bottom", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(135deg, #ef3e4e, #c13d3d)",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast()
+
         }
     }
 

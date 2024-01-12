@@ -24,7 +24,6 @@
     <a class="header-btn" href="{{URL::to('/')}}">Інсталяція</a>
     <a class="header-btn" href="{{URL::to('/')}}/inputs">Форми</a>
     <a class="header-btn" href="{{URL::to('/')}}/buttons">Кнопки</a>
-    <a class="header-btn" href="{{URL::to('/')}}/backend">Бекенд</a>
 </div>
 
 

@@ -2,14 +2,18 @@
 @section('title', "Форми Laravel")
 
 @section('content')
-<div id="article" class="mt-3">
+<div id="article" class="pt-4 ps-4 pe-4 pb-4 bg-white">
 <h1 style="text-align: center;">Form Grabber</h1>
 <h2>Що вміє ця бібліотека?</h2>
 <p>Мета в тому, щоб економити час і зусилля. <br>Всі форми вже запрограмовані, залишилось лише скопіювати їх і вставити у потрібному місці.</p>
 
 
 <h2>Інсталяція поетапно</h2>
-<p><span class="badge bg-info">Крок 1 з X</span> Підключи скрипти у секцію HEAD. Сюди входить: <b>bootstrap v5.3.2</b>, <b>Quill Editor v1.3.6</b> і моя бібліотека <b>FormGrabber</b>.</p>
+<p><span class="badge bg-info">Крок 1 з X</span> Підключи скрипти у секцію HEAD. Сюди входить: 
+    <b><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction" target="_blank" class="bg-light rounded pt-1 pb-1 ps-2 pe-2 border">bootstrap v5.3.2</a></b>, 
+    <b><a href="https://quilljs.com" target="_blank" class="bg-light rounded pt-1 pb-1 ps-2 pe-2 border">Quill Editor v1.3.6</a></b>,
+    <b><a href="https://apvarun.github.io/toastify-js" target="_blank" class="bg-light rounded pt-1 pb-1 ps-2 pe-2 border">Toastify</a></b>
+    і моя бібліотека <b>FormGrabber</b>.</p>
 @include("templates.code", [
     "id" => "bundles-code",
     'path' => "../resources/views/codes/bundles.stub",
@@ -43,9 +47,22 @@
 
 <h2>Як це працює? Суть</h2>
 
-<p>Що робити далі?</p>
+<p>
+    <ul>
+        <li>Вказую ідентифікатори інпутів, з яких потрібно взяти дані</li>
+        <li>Вказую ідентифікатор кнопки, яка активує збір даних. А також switch_button_id. Основна кнопка буде прихована, а друга показана на час виконання запиту. </li>
+        <li>Метод по-дефолту POST, можна вказати PATCH.</li>
+        <li>Файли передавати не вміє, загружай на гугл диск.</li>
+        <li>Ендпоінт повинен завжди повертати JSON. Нехай формат буде таким:
+            @include("templates.code", [
+                "id" => "json-response",
+                'path' => "../resources/views/codes/json-response.stub",
+                'lang' => "php",
+            ])            
+        </li>
+    <ul>
+</p>
 
-<h2>Код для обробки даних форми...</h2>
 </div>
 @endsection
 

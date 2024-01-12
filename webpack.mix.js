@@ -11,6 +11,7 @@ mix.combine([
     'public/libraries_src/quill.js', 
     'public/libraries_src/quill.min.js', 
     'public/libraries_src/form-grabber.js', 
+    'public/libraries_src/toastify.js', 
 ], 'public/form-grabber-bundle.js');
 
 mix.combine([
@@ -19,4 +20,5 @@ mix.combine([
     'public/libraries_src/quill.snow.css', 
     'public/libraries_src/quill.bubble.css', 
     'public/libraries_src/button-template.css', 
+    'public/libraries_src/toastify.css', 
 ], 'public/form-grabber-bundle.css');

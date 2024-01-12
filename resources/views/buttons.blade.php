@@ -2,7 +2,7 @@
 @section('title', "Кнопки Laravel")
 
 @section('content')
-<div id="article" class="mt-3">
+<div id="article" class="pt-4 ps-4 pe-4 pb-4 bg-white">
 <h1 style="text-align: center;">Кнопки</h1>
 
     <div class="p-3">
