@@ -42,6 +42,8 @@ body {
     border-radius: 6px;
     color: #FFD152;
     text-decoration: none;
+    font: 14px/1.4em fira sans,Arial,sans-serif;
+    text-transform: uppercase;
 }
 
 .header-btn:hover {

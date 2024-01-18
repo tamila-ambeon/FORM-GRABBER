@@ -20296,9 +20296,13 @@ class FormGrabber
             this.grabInputs()
         })
 
-        this.switchButtonElement.addEventListener("click", (element) => { 
-            if(this.debug) console.log("Button #" + this.params.button_id + " was clicked.")
-        })
+        if(this.switchButtonElement != null) {
+            if(this.switchButtonElement != undefined) {
+                this.switchButtonElement.addEventListener("click", (element) => { 
+                    if(this.debug) console.log("Button #" + this.params.button_id + " was clicked.")
+                })
+            }
+        }
     }
 
     /**
@@ -20393,6 +20397,10 @@ class FormGrabber
     {
         if(this.params.method.toUpperCase() == "PATCH") {
             this.formData.append('_method', 'PATCH')
+        }
+
+        if(this.params.method.toUpperCase() == "DELETE") {
+            this.formData.append('_method', 'DELETE')
         }
 
         this.beforeSend()

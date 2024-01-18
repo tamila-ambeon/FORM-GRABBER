@@ -38,7 +38,7 @@
 ])
 <p><span class="badge bg-info">Крок 5 з X</span> Підключи цей файл внизу на сторінці форми:</p>
 @include("templates.code", [
-    "id" => "extend-formgrabber",
+    "id" => "script-extender",
     'path' => "../resources/views/codes/script-extender.stub",
     'lang' => "xml",
 ])

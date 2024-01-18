@@ -50,6 +50,16 @@
             ]) 
         </div>
 
+
+        <div class="mb-3">
+            <p>Класи з двома колонками:</p>
+            @include("templates.code", [
+                "id" => "two-columns",
+                'path' => "../resources/views/codes/two-columns.stub",
+                'lang' => "html",
+            ]) 
+        </div>
+        
         
     </div>
 </div>
