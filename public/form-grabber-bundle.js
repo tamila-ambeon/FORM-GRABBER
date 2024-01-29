@@ -20213,6 +20213,8 @@ class FormGrabber
     buttonElement = null
     switchButtonElement = null
     formData = null
+    isAutoSend = true
+    formData = new FormData()
 
     /**
      * 
@@ -20292,7 +20294,6 @@ class FormGrabber
             }
 
             if(this.debug) console.log("Button #" + this.params.button_id + " was clicked.")
-            this.formData = new FormData()
             this.grabInputs()
         })
 
@@ -20349,7 +20350,7 @@ class FormGrabber
                         if(element.checked) {
                             this.formData.append(inputId + '[]', element.value)
                         }
-                    }                
+                    }             
                 } else {
                     console.error("Input with id#" + inputId + " not found.")
                 }
@@ -20409,11 +20410,20 @@ class FormGrabber
 
     beforeSend() {}
 
+    dontSendAutomatically()
+    {
+        this.isAutoSend = false;
+    }
+
     /**
      * 
      */
     async send(request)
     {
+        if(!this.isAutoSend) {
+            return false
+        }
+        
         try {
             const response = await fetch(this.params.endpoint, {
                 method: "POST",

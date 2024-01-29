@@ -1,6 +1,8 @@
 class DoneForm extends FormGrabber
 {
     beforeSend() {
+       // this.dontSendAutomatically()
+       // console.log("f", this.formData)
     }
     onSuccess(json) {
 
