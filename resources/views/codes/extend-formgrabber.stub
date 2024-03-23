@@ -9,7 +9,7 @@ try {
     let mainInfo = new MainInfo({
         // "debug": true,
         'button_id': "my_info_button",
-        // 'switch_button_id': "waiting_button",
+        'switch_button_id': "waiting_button", // кнопка очікування
         'input_ids': [],
         'method': "PATCH",
         'endpoint': document.getElementsByTagName("base")[0].href + "api/test-form-input"
