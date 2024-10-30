@@ -2,6 +2,7 @@ class MainInfo extends FormGrabber
 {
     beforeSend() {
         // this.disableSending(true)
+        // if(this.formData.get('name').length > 0)
     }
     onSuccess(json) {}
     onError(error) {}
