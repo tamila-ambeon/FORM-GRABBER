@@ -407,6 +407,12 @@ class FormGrabber
         }
     }
 
+    enableSending()
+    {
+        this.isAutoSend = true
+        this.isButtonActive = true
+    }
+
     /**
      * 
      */
