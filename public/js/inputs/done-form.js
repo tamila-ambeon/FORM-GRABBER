@@ -1,7 +1,9 @@
 class DoneForm extends FormGrabber
 {
     beforeSend() {
-       // this.dontSendAutomatically()
+       // this.disableButton()
+       // this.disableSending(true)
+        
        // console.log("f", this.formData)
     }
     onSuccess(json) {
@@ -16,7 +18,7 @@ class DoneForm extends FormGrabber
 
 try {
     let doneForm = new DoneForm({
-        "debug": true,
+        //"debug": true,
         'button_id': "done_button",
         'switch_button_id': "waiting_button",
         'input_ids': ["hidden_id", "age", "some_text", "some_text_area", "quill_content", "drink", "youtube", "locations", "date", "time"],

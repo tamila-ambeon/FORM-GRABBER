@@ -1,6 +1,8 @@
 class MainInfo extends FormGrabber
 {
-    beforeSend() {}
+    beforeSend() {
+        // this.disableSending(true)
+    }
     onSuccess(json) {}
     onError(error) {}
 }
